@@ -1,9 +1,10 @@
-Feature: Google Search Functionality Title Verification
-   User story: As a user, when I am on the Google search page
-   I should be able to search whatever I want and see relevant information
+Feature: Amazon.in Navigation Pages Functionality
+   User story: As a user, when I am on the Amazon.in Home page
+   I should be able to check a second highest priced Samsung TV
+   and take information about this TV.
 
   Background:
-    Given User is on Google search page
+    Given User is on Amazon.in Home page
 
   @smoke
   Scenario: Search functionality result title verification
