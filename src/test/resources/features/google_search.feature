@@ -14,6 +14,7 @@ Feature: Google Search Functionality Title Verification
   Scenario: Search functionality result title verification
     When User types "apple" in the google search box and clicks enter
     Then User sees "apple - Google Search" is in the google title
+    Then User sees "apple - Google Search" is in the google title
 
 
 
