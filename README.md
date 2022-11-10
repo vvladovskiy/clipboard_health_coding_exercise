@@ -1,28 +1,32 @@
-# Assignment
+Steps
 
-[Click here to read the assignment](./docs/assignment.md)
+Open https://www.amazon.in/.
 
-## vanilla
+Note: Clicking on above URL may redirect you to amazon.com. Change it to amazon.in
+1. Click on the hamburger menu in the top left corner.
 
-This is a base starter kit framework that you can use to build your tests for the above assignment.
-However, if you are more comfortable with your own tool kit, feel free to use that as well!
+![](/Users/benney/Downloads/hamburger-menu.png)
 
-## External dependencies
+2. Scroll own and then Click on the TV, Appliances and Electronics link under Shop by Department section.
 
-For this project to run, you would need to install below 3 dependencies on your machine:
+![](/Users/benney/Downloads/tv-appliance-electronics.png))
 
-- **[Java 11](https://openjdk.java.net/projects/jdk/11/)** (as the core programming language)
-- **[Maven 3.8.5](https://maven.apache.org/download.cgi)** (for dependency management)
-- **[Google Chrome latest version](https://www.google.com/chrome/?brand=CHBD&gclid=Cj0KCQjwr-SSBhC9ARIsANhzu15P0PA-n9Zp4NpxKaOHVGtBD1TZQH0HlQQE6hUfsOFAU1nf-Rzdlf4aAoTJEALw_wcB&gclsrc=aw.ds)** (browser to run your tests)
+3. Then click on Televisions under Tv, Audio & Cameras sub section.
 
-> If your JAVA_HOME is set to anything other than JDK 11, you would need to update the path. Else your project
-> will not run. Also, do remember to set the correct JDK settings in your IDE.
+![](/Users/benney/Downloads/televisions.png)
 
-## Getting Started
+4. Scroll down and filter the results by Brand ‘Samsung’.
 
-For easiest way to getting started, extract this project and open it from IntelliJ.
-> Then Do a dry run on test in : test -> java -> TestSandbox class and see if your setup is correct.  
+![](/Users/benney/Downloads/samsung.png)
 
-Tip: Do remember to update this readme file for anything else that you think needs updating here!
+5. Sort the Samsung results with price High to Low.
 
-## Success
+![](/Users/benney/Downloads/sort-price-high-to-low.png)
+
+7. Click on the second highest priced item (whatever that maybe at the time of automating).
+
+8. Switch the Window
+
+9. Assert that “About this item” section is present and log this section text to console/report.
+
+![](/Users/benney/Downloads/about-this-item.png)
