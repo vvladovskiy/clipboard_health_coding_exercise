@@ -11,12 +11,12 @@ Feature: Amazon.in Navigation Pages Functionality
     Scenario: Page Navigation Functionality result "About this item"
         When Click on the hamburger menu in the top left corner.
         And Scroll down and then Click on the TV, Appliances and Electronics link under Shop by Department section.
-        Then Click on Televisions under Tv, Audio & Cameras sub section.
-        Then Scroll down and filter the results by Brand ‘Samsung’.
-        Then Sort the Samsung results with price High to Low.
-        Then Click on the second highest priced item (whatever that maybe at the time of automating).
-        Then Switch the Window
-        Then Assert that “About this item” section is present and log this section text to console/report.
+        When Click on Televisions under Tv, Audio & Cameras sub section.
+        And Scroll down and filter the results by Brand ‘Samsung’.
+        When Sort the Samsung results with price High to Low.
+        When Click on the second highest priced item whatever that maybe at the time of automating.
+        When Switch the Window.
+        Then Assert that “About this item” section is present and log this section text to console report.
 
 
 
