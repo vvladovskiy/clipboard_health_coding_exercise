@@ -13,18 +13,10 @@ Feature: Amazon.in Navigation Pages Functionality
         And Scroll down and then Click on the TV, Appliances and Electronics link under Shop by Department section.
         When Click on Televisions under Tv, Audio & Cameras sub section.
         And Scroll down and filter the results by Brand ‘Samsung’.
-        When Sort the Samsung results with price High to Low.
-        When Click on the second highest priced item whatever that maybe at the time of automating.
-        When Switch the Window.
+        When Sort the Samsung results by click Sort By.
+        And Choose price sort High to Low.
+        When Click on the second highest priced item.
+        And Switch the Window.
         Then Assert that “About this item” section is present and log this section text to console report.
-
-
-
-#    @AmazonSearch
-#    Scenario: Search functionality result title verification
-#        When User types "apple" in the google search box and clicks enter
-#        Then User sees "apple - Google Search" is in the google title
-#        Then User sees "apple - Google Search" is in the google title
-#
 
 

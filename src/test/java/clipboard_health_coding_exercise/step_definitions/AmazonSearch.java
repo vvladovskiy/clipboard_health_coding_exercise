@@ -1,6 +1,8 @@
 package clipboard_health_coding_exercise.step_definitions;
 
+import clipboard_health_coding_exercise.pages.AmazonElectronicsTelevisionPage;
 import clipboard_health_coding_exercise.pages.AmazonHomePage;
+import clipboard_health_coding_exercise.pages.AmazonSamsungPage;
 import clipboard_health_coding_exercise.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -8,11 +10,16 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 
 
 public class AmazonSearch {
 
     AmazonHomePage amazonHomePage =new AmazonHomePage();
+    AmazonElectronicsTelevisionPage amazonElectronicsTelevisionPage = new AmazonElectronicsTelevisionPage();
+    AmazonSamsungPage amazonSamsungPage = new AmazonSamsungPage();
+
+
 
     @Given("User is on Amazon.in Home page")
     public void user_is_on_amazon_in_home_page() {
@@ -33,21 +40,30 @@ public class AmazonSearch {
     }
     @And("Scroll down and filter the results by Brand ‘Samsung’.")
     public void scroll_down_and_filter_the_results_by_brand_samsung() {
-        amazonHomePage.checkBoxSamsung.click();
+        amazonElectronicsTelevisionPage.checkBoxSamsung.click();
     }
-    @When("Sort the Samsung results with price High to Low.")
-    public void sort_the_samsung_results_with_price_high_to_low() {
-        amazonHomePage.sortBy.click();
+    @When("Sort the Samsung results by click Sort By.")
+    public void sort_the_samsung_results_by_click_sort_by() {
+        amazonSamsungPage.sortBy.click();
     }
-    @When("Click on the second highest priced item whatever that maybe at the time of automating.")
-    public void click_on_the_second_highest_priced_item_whatever_that_maybe_at_the_time_of_automating() {
-        amazonHomePage.highToLow.click();
 
+
+    @When("Choose price sort High to Low.")
+    public void choose_price_sort_high_to_low() {
+        amazonSamsungPage.highToLow.click();
     }
-    @When("Switch the Window.")
-    public void switch_the_window() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+    @When ("Click on the second highest priced item.")
+    public void click_on_the_second_highest_priced_item(){
+        amazonSamsungPage.secondHighPriceItem.click();
+    }
+
+
+    @And("Switch the Window.")
+    public void switch_the_window(WebDriver driver) {
+        String SecondWindow = driver.getWindowHandle();
+        System.out.println("SecondWindow Handle =" + SecondWindow);
+        driver.switchTo().window(SecondWindow);
     }
     @Then("Assert that “About this item” section is present and log this section text to console report.")
     public void assert_that_about_this_item_section_is_present_and_log_this_section_text_to_console_report() {
