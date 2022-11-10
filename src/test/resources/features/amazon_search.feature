@@ -20,11 +20,11 @@ Feature: Amazon.in Navigation Pages Functionality
 
 
 
-    @AmazonSearch
-    Scenario: Search functionality result title verification
-        When User types "apple" in the google search box and clicks enter
-        Then User sees "apple - Google Search" is in the google title
-        Then User sees "apple - Google Search" is in the google title
-
+#    @AmazonSearch
+#    Scenario: Search functionality result title verification
+#        When User types "apple" in the google search box and clicks enter
+#        Then User sees "apple - Google Search" is in the google title
+#        Then User sees "apple - Google Search" is in the google title
+#
 
 
