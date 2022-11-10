@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features" ,
         glue = "clipboard_health_coding_exercise/step_definitions",
         dryRun = true,
-        tags = "@smoke,@AmazonSearch"
+        tags = "@smoke"
 )
 public class CukesRunner {
 }

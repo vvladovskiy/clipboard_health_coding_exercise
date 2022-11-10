@@ -5,11 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AmazonHomePage {
-    public AmazonHomePage(){
+public class AmazonHomePage extends BasePage {
 
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
 
     @FindBy(xpath = "//*[@id='nav-hamburger-menu']")
     public WebElement hamburgerMenu;
@@ -39,7 +36,7 @@ public class AmazonHomePage {
     @FindBy(xpath = "//*[@id='s-result-sort-select_2']")
     public WebElement highToLow;
 
-@FindBy(xpath = "//*[@id='search']/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/div[1]/span/a/div")
+    @FindBy(xpath = "//*[@id='search']/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/div[1]/span/a/div")
     public WebElement secondHighPrice;
 
 // Switch window
